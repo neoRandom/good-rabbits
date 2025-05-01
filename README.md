@@ -10,7 +10,7 @@
 </blockquote>
 </h3>
 
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,tailwind,react,express,node,figma" />
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,tailwind,react,express,nodejs,figma" />
 
 <br />
 
