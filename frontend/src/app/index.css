@@ -79,6 +79,13 @@ html {
 }
 
 @layer components {
+    /* .app-btn {
+        @apply text-white text-lg font-medium py-2.5 bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950]  rounded-[10px] shadow-lg cursor-pointer hover:brightness-95;
+    } */
+  
+    .app-btn-cadastro {
+        @apply text-white text-lg font-medium py-1.5 bg-linear-to-r from-[#FF6900] via-[#FF7C21] to-[#FF6900] rounded-[10px] shadow-lg cursor-pointer hover:brightness-95;
+    }
     .primary-colors {
         @apply text-white font-medium bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950];
     }
