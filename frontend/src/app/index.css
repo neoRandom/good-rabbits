@@ -41,17 +41,32 @@ html {
     font-family: "Roboto", sans-sefif;
 }
 
-@layer components {
-    .app-btn {
-        @apply text-white text-lg font-medium py-2.5 bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950]  rounded-[10px] shadow-lg cursor-pointer hover:brightness-95;
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+@layer utilities {
+    .rounded-small {
+        @apply rounded-[10px];
     }
 
-    .app-btn-cadastro {
-        @apply text-white text-lg font-medium py-1.5 bg-linear-to-r from-[#FF6900] via-[#FF7C21] to-[#FF6900] rounded-[10px] shadow-lg cursor-pointer hover:brightness-95;
+    .rounded-big {
+        @apply rounded-[20px];
+    }
+
+    .app-shadow-neutral {
+        @apply shadow-lg;
     }
 
     .text-heading-2 {
         @apply font-normal text-3xl text-[#202020]
+    }
+
+    .text-heading-4 {
+        @apply text-xl text-[#202020];
     }
 
     .text-detail-1 {
@@ -60,5 +75,18 @@ html {
 
     .text-detail-2 {
         @apply text-[#606060] text-sm
+    }
+}
+
+@layer components {
+    /* .app-btn {
+        @apply text-white text-lg font-medium py-2.5 bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950]  rounded-[10px] shadow-lg cursor-pointer hover:brightness-95;
+    } */
+  
+    .app-btn-cadastro {
+        @apply text-white text-lg font-medium py-1.5 bg-linear-to-r from-[#FF6900] via-[#FF7C21] to-[#FF6900] rounded-[10px] shadow-lg cursor-pointer hover:brightness-95;
+    }
+    .primary-colors {
+        @apply text-white font-medium bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950];
     }
 }

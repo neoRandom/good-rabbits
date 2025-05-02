@@ -30,7 +30,7 @@ const App = () => {
                     <Route
                         index
                         element={
-                            authUser ? <HomePage /> : <Navigate to="/login" />
+                            authUser || true ? <HomePage /> : <Navigate to="/login" />
                         }
                     />
                     <Route
