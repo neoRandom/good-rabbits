@@ -15,6 +15,9 @@ export const useAuthStore: UseBoundStore<StoreApi<AuthStore>> = create(
         socket: null,
 
         checkAuth: async () => {
+            set({ isCheckingAuth: false });
+            return;
+
             try {
                 set({ isCheckingAuth: true });
 
