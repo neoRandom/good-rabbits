@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
 @plugin "daisyui/theme" {
@@ -33,4 +35,26 @@
     --border: 1px;
     --depth: 1;
     --noise: 1;
+}
+
+html {
+    font-family: "Roboto", sans-sefif;
+}
+
+@layer components {
+    .app-btn {
+        @apply text-white text-lg font-medium py-2.5 bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950] rounded-[10px] shadow-lg;
+    }
+
+    .text-heading-2 {
+        @apply font-normal text-3xl text-[#202020]
+    }
+
+    .text-detail-1 {
+        @apply text-[#606060] text-base
+    }
+
+    .text-detail-2 {
+        @apply text-[#606060] text-sm
+    }
 }
