@@ -2,15 +2,15 @@ import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
 import { Loader } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
-import MainLayout from "../pages/layouts/main";
-import AppLayout from "../pages/layouts/app";
-import HomePage from "../pages/HomePage";
-import SignupPage from "../pages/SignupPage";
-import LoginPage from "../pages/LoginPage";
-import GoalsPage from "../pages/GoalsPage";
-import ChallengePage from "../pages/ChallengePage";
+import MainLayout from "../pages/layouts/MainLayout";
+import AppLayout from "../pages/layouts/AppLayout";
+import HomePage from "../pages/app/HomePage";
+import SignupPage from "../pages/auth/SignupPage";
+import LoginPage from "../pages/auth/LoginPage";
+import GoalsPage from "../pages/app/GoalsPage";
+import ChallengePage from "../pages/app/ChallengePage";
 
-const App = () => {
+const Root = () => {
     const { authUser, isCheckingAuth, checkAuth }: any = useAuthStore();
 
     // Runs the function once, and then runs again when the checkAuth function changes (probably never)
@@ -71,4 +71,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Root;

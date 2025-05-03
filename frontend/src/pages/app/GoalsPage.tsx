@@ -1,13 +1,9 @@
-import GoalCard from "../components/GoalCard";
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import GoalCard from "../../components/GoalCard";
 
 const GoalsPage = () => {
     return (
-        <div className="bg-stone-100 h-full w-full md:flex flex-row-reverse justify-between">
-            <Topbar />
-
-            <div className="flex flex-col items-center justify-center mt-8 lg:items-start">
+        <div className="w-full md:flex flex-row-reverse justify-between overflow-x-auto">
+            <div className="flex flex-col items-center justify-center lg:items-start">
 
                 <div className="flex gap-2">
                     <button className="bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950] w-[160px] rounded-t-[10px] text-white font-medium py-1">Suas Metas</button>
@@ -29,8 +25,6 @@ const GoalsPage = () => {
                     <button className="app-btn w-[188px] h-[35px] py-0 text-3xl">+</button>
                 </div>
             </div>
-
-            <Sidebar />
         </div>
     );
 };

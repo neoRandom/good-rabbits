@@ -1,15 +1,9 @@
-import Sidebar  from "../components/Sidebar";
-import ChallengeCard from "../components/ChallengeCard";
-import Topbar from "../components/Topbar";
+import ChallengeCard from "../../components/ChallengeCard";
 
 const ChallengePage = () => {
     return(
-        <div className="bg-stone-100 h-full w-full md:flex flex-row-reverse justify-between">
-            <Topbar />
-
-            
-
-            <div className="flex flex-col items-center justify-center mt-8 lg:items-start">
+        <div className="w-full md:flex flex-row-reverse justify-between">
+            <div className="flex flex-col items-center justify-center lg:items-start">
 
                 <div className="flex gap-2">
                     <button className="bg-[#D9D9D9] w-[160px] rounded-t-[10px] text-black font-medium">Suas Metas</button>
@@ -29,8 +23,6 @@ const ChallengePage = () => {
                     </div>
                 </div>
             </div>
-            
-            <Sidebar />
         </div>
     );
 };
