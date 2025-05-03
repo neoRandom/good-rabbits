@@ -54,8 +54,8 @@
     --radius-app-default: 10px;
     --radius-app-big: 20px;
 
-    --shadow-app-neutral: 0 2 6 -1 rgba(0, 0, 0, 0.3);
-    --shadow-app-colored: 0 2 6 -1 rgba(var(--color-primary-darkest) 0.4);
+    --shadow-app-neutral: 0px 2px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-app-colored: 0px 2px 6px -1px rgba(var(--color-primary-darkest) 0.4);
 
     --text-heading-1: 36px;
     --text-heading-2: 30px;
@@ -66,8 +66,6 @@
     --text-body-3: 14px;
     --text-body-4: 12px;
 
-    --font-app-regular: 400;
-    --font-app-medium: 500;
     --font-roboto: "Roboto", sans-serif;
     --font-montserrat: "Montserrat", "Roboto", sans-serif;
 }
@@ -81,11 +79,11 @@
 
 @layer utilities {
     .app-bg-primary {
-        @apply text-app-content-light font-app-medium bg-linear-to-r from-app-primary via-app-primary-light to-app-primary;
+        @apply text-app-content-light font-medium bg-linear-to-r from-app-primary via-app-primary-light to-app-primary;
     }
 
     .app-bg-secondary {
-        @apply text-app-content-light font-app-medium bg-linear-to-r from-app-secondary via-app-secondary-light to-app-secondary;
+        @apply text-app-content-light font-medium bg-linear-to-r from-app-secondary via-app-secondary-light to-app-secondary;
     }
 }
 

@@ -6,13 +6,23 @@
  * - Sombra customizada pra combinar com o do Figma
  */
 
+import { Link, useNavigate } from "react-router-dom";
+
 const LoginPage = () => {
+    const navigate = useNavigate();
+
+    const onSubmit = () => {
+        navigate("/app");
+    };
+
     return (
-        <div className="h-full w-full flex border lg:flex-1 "> 
-            <div className="flex flex-col justify-center w-full h-full px-8 gap-6 max-w-xl m-auto lg:m-0">
+        <div className="h-full w-full flex border lg:flex-1 ">
+            <div className="flex flex-col justify-center w-full h-full px-8 gap-7 max-w-xl m-auto lg:m-0">
                 <div className="flex flex-col items-center">
                     <h1 className="text-heading-2">Entre na sua Conta</h1>
-                    <p className="text-detail-1">Entre novamente na sua toca</p>
+                    <p className="text-body-2 text-app-detail">
+                        Entre novamente na sua toca
+                    </p>
 
                     <div className="flex flex-col w-full my-12">
                         <label className="floating-label w-full mb-6">
@@ -21,7 +31,6 @@ const LoginPage = () => {
                                 type="email"
                                 placeholder="Email"
                                 className="input input-lg w-full"
-                        
                             />
                         </label>
                         <label className="floating-label w-full ">
@@ -34,27 +43,40 @@ const LoginPage = () => {
                         </label>
                     </div>
 
-                    <button type="submit" className="app-btn w-full mb-6">Entre</button>
-                    <a
-                        href="/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-detail-2 hover:underline"
+                    <button
+                        type="submit"
+                        onClick={() => onSubmit()}
+                        className="app-bg-primary w-full mb-6 py-3 rounded-app-default shadow-app-neutral"
+                    >
+                        Entre
+                    </button>
+                    <Link
+                        to="/login"
+                        className="text-body-3 text-app-detail underline"
                     >
                         Esqueci minha Senha
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="flex items-center opacity-50">
-                    <hr className="flex-1 border-[#606060]/50" />
+                    <hr className="flex-1 border-app-detail/50" />
                     <p className="text-sm mx-[12px]"> OU </p>
-                    <hr className="flex-1 border-[#606060]/50" />
+                    <hr className="flex-1 border-app-detail/50" />
                 </div>
 
-                <button type="button" className="app-btn-cadastro w-1/2 btn-accent mx-auto">Cadastre-se</button>
+                <Link
+                    to="/signup"
+                    className="text-center app-bg-secondary w-2/3 mb-6 mx-auto py-2 rounded-app-default shadow-app-neutral"
+                >
+                    Cadastre-se
+                </Link>
             </div>
             <div className="hidden lg:flex flex-1 w-full">
-                <img src="src/assets/logo3.png" alt="Login" className="w-full min-w-xl max-w-5xl m-auto"/>
+                <img
+                    src="src/assets/logo3.png"
+                    alt="Login"
+                    className="w-full min-w-xl max-w-5xl m-auto"
+                />
             </div>
         </div>
     );
