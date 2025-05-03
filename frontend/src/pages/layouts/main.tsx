@@ -1,14 +1,14 @@
 import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
 
-const Layout = () => {
+const MainLayout = () => {
     return (
-        <div className="h-screen flex flex-col">
-            <Outlet />
-
+        <div className="w-full h-screen">
             <Toaster />
+
+            <Outlet />
         </div>
     )
 }
 
-export default Layout;
+export default MainLayout;
