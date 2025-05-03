@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 @plugin "daisyui";
@@ -37,8 +37,39 @@
     --noise: 1;
 }
 
-html {
-    font-family: "Roboto", sans-sefif;
+@theme {
+    --color-app-primary: #00C950;
+    --color-app-primary-light: #10D960;
+    --color-app-primary-dark: #0D542B;
+    --color-app-primary-darkest: #032E15;
+    --color-app-secondary: #FF6900;
+    --color-app-secondary-light: #E0AE09;
+    --color-app-secondary-dark: #7E2A0C;
+    --color-app-content-light: #FFFFFF;
+    --color-app-content-dark: #202020;
+    --color-app-detail: #606060;
+    --color-app-bg: oklch(97% 0.001 106.424); /* Stone 100 */
+    --color-app-bg-dark: oklch(92.3% 0.003 48.717); /* Stone 200 */
+
+    --radius-app-default: 10px;
+    --radius-app-big: 20px;
+
+    --shadow-app-neutral: 0 2 6 -1 rgba(0, 0, 0, 0.3);
+    --shadow-app-colored: 0 2 6 -1 rgba(var(--color-primary-darkest) 0.4);
+
+    --text-heading-1: 36px;
+    --text-heading-2: 30px;
+    --text-heading-3: 24px;
+    --text-heading-4: 20px;
+    --text-body-1: 18px;
+    --text-body-2: 16px;
+    --text-body-3: 14px;
+    --text-body-4: 12px;
+
+    --font-app-regular: 400;
+    --font-app-medium: 500;
+    --font-roboto: "Roboto", sans-serif;
+    --font-montserrat: "Montserrat", "Roboto", sans-serif;
 }
 
 @layer base {
@@ -49,44 +80,30 @@ html {
 }
 
 @layer utilities {
-    .rounded-small {
-        @apply rounded-[10px];
+    .app-bg-primary {
+        @apply text-app-content-light font-app-medium bg-linear-to-r from-app-primary via-app-primary-light to-app-primary;
     }
 
-    .rounded-big {
-        @apply rounded-[20px];
-    }
-
-    .app-shadow-neutral {
-        @apply shadow-lg;
-    }
-
-    .text-heading-2 {
-        @apply font-normal text-3xl text-[#202020]
-    }
-
-    .text-heading-4 {
-        @apply text-xl text-[#202020];
-    }
-
-    .text-detail-1 {
-        @apply text-[#606060] text-base
-    }
-
-    .text-detail-2 {
-        @apply text-[#606060] text-sm
+    .app-bg-secondary {
+        @apply text-app-content-light font-app-medium bg-linear-to-r from-app-secondary via-app-secondary-light to-app-secondary;
     }
 }
 
 @layer components {
-    /* .app-btn {
+    /* 
+     .app-btn {
         @apply text-white text-lg font-medium py-2.5 bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950]  rounded-[10px] shadow-lg cursor-pointer hover:brightness-95;
-    } */
+    }
   
     .app-btn-cadastro {
         @apply text-white text-lg font-medium py-1.5 bg-linear-to-r from-[#FF6900] via-[#FF7C21] to-[#FF6900] rounded-[10px] shadow-lg cursor-pointer hover:brightness-95;
     }
     .primary-colors {
         @apply text-white font-medium bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950];
-    }
+    } */
+}
+
+html {
+    font-family: var(--font-roboto);
+    color: var(--color-content-dark);
 }
