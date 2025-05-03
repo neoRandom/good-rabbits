@@ -9,6 +9,7 @@ import SignupPage from "../pages/auth/SignupPage";
 import LoginPage from "../pages/auth/LoginPage";
 import GoalsPage from "../pages/app/GoalsPage";
 import ChallengePage from "../pages/app/ChallengePage";
+import Error404 from "../pages/Error404";
 
 const Root = () => {
     const { authUser, isCheckingAuth, checkAuth }: any = useAuthStore();
@@ -64,7 +65,7 @@ const Root = () => {
                     </Route>
 
                     {/* 404 Handler; TODO: 404 page */}
-                    <Route path="*" element={<Navigate to="/" />} />
+                    <Route path="*" element={<Error404 />} />
                 </Route>
             </Routes>
         </BrowserRouter>
