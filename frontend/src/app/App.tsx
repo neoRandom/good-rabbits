@@ -7,6 +7,8 @@ import AppLayout from "../pages/layouts/app";
 import HomePage from "../pages/HomePage";
 import SignupPage from "../pages/SignupPage";
 import LoginPage from "../pages/LoginPage";
+import GoalsPage from "../pages/GoalsPage";
+import ChallengePage from "../pages/ChallengePage";
 
 const App = () => {
     const { authUser, isCheckingAuth, checkAuth }: any = useAuthStore();
@@ -45,6 +47,18 @@ const App = () => {
                                 ) : (
                                     <Navigate to="/login" />
                                 )
+                            }
+                        />
+                        <Route
+                            path="/app/goals"
+                            element={
+                                !authUser ? <GoalsPage /> : <Navigate to="/login" />
+                            }
+                        />
+                        <Route
+                            path="/app/challenges"
+                            element={
+                                !authUser ? <ChallengePage /> : <Navigate to="/login" />
                             }
                         />
                     </Route>

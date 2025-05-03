@@ -81,7 +81,7 @@
     .app-bg-primary {
         @apply text-app-content-light font-medium bg-linear-to-r from-app-primary via-app-primary-light to-app-primary;
     }
-
+  
     .app-bg-secondary {
         @apply text-app-content-light font-medium bg-linear-to-r from-app-secondary via-app-secondary-light to-app-secondary;
     }
