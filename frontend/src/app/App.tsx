@@ -2,7 +2,8 @@ import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
 import { Loader } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
-import Layout from "../pages/layout";
+import MainLayout from "../pages/layouts/main";
+import AppLayout from "../pages/layouts/app";
 import HomePage from "../pages/HomePage";
 import SignupPage from "../pages/SignupPage";
 import LoginPage from "../pages/LoginPage";
@@ -26,34 +27,30 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route
-                        index
-                        element={
-                            authUser || true ? <HomePage /> : <Navigate to="/login" />
-                        }
-                    />
-                    <Route
-                        path="/signup"
-                        element={
-                            !authUser ? <SignupPage /> : <Navigate to="/signup" />
-                        }
-                    />
-                    <Route
-                        path="/login"
-                        element={
-                            !authUser ? <LoginPage /> : <Navigate to="/" />
-                        }
-                    />
-                    {/*
-                <Route path="/settings" element={<SettingsPage />} />
-                <Route
-                    path="/profile"
-                    element={
-                        authUser ? <ProfilePage /> : <Navigate to="/login" />
-                    }
-                />
-                */}
+                <Route path="/" element={<MainLayout />}>
+                    {/* Redirect on root */}
+                    <Route index element={<Navigate to="/app" />} />
+
+                    {/* Auth Routes */}
+                    <Route path="/signup" element={<SignupPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+
+                    {/* App Routes */}
+                    <Route path="/app" element={<AppLayout />}>
+                        <Route
+                            index
+                            element={
+                                authUser || true ? (
+                                    <HomePage />
+                                ) : (
+                                    <Navigate to="/login" />
+                                )
+                            }
+                        />
+                    </Route>
+
+                    {/* 404 Handler; TODO: 404 page */}
+                    <Route path="*" element={<Navigate to="/" />} />
                 </Route>
             </Routes>
         </BrowserRouter>
