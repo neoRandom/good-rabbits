@@ -8,6 +8,7 @@ import SignupPage from "../pages/SignupPage";
 import LoginPage from "../pages/LoginPage";
 import GoalsPage from "../pages/GoalsPage";
 import ChallengePage from "../pages/ChallengePage";
+import Error404 from "../pages/Error404";
 
 const App = () => {
     const { authUser, isCheckingAuth, checkAuth }: any = useAuthStore();
@@ -57,6 +58,12 @@ const App = () => {
                         path="/challenges"
                         element={
                             !authUser ? <ChallengePage /> : <Navigate to="/" />
+                        }
+                    />
+                    <Route
+                        path="*"
+                        element={
+                            !authUser ? <Error404 /> : <Navigate to="/" />
                         }
                     />
                     {/*
