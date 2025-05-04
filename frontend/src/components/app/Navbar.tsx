@@ -68,7 +68,7 @@ const Navbar = () => {
                     data-tip="Prêmios"
                 >
                     <Link
-                        to="/app/challenges"
+                        to="/app/prizes"
                         onClick={() => setSelected(2)}
                         className="flex justify-center items-center w-[60px] md:w-[45px] h-[45px]"
                     >

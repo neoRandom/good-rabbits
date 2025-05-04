@@ -1,12 +1,22 @@
-import ChallengeCard from "../../components/ChallengeCard";
+import ChallengeCard from "./ChallengeCard";
 
-const ChallengePage = () => {
+type ChallengeProps = {
+    setGoalPage: React.Dispatch<React.SetStateAction<boolean>>
+};
+
+
+const ChallengePageComponent = (props: ChallengeProps) => {
+
+    const handleGoalPage = () =>{
+        props.setGoalPage(true);
+    }
+
     return(
         <div className="w-full md:flex flex-row-reverse justify-between">
             <div className="flex flex-col items-center justify-center lg:items-start">
 
                 <div className="flex gap-2">
-                    <button className="bg-[#D9D9D9] w-[160px] rounded-t-[10px] text-black font-medium">Suas Metas</button>
+                    <button onClick={handleGoalPage} className="bg-[#D9D9D9] w-[160px] rounded-t-[10px] text-black font-medium">Suas Metas</button>
                     <button className="bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950] w-[160px] rounded-t-[10px] text-white font-medium py-1">Desafios Diários</button>
                 </div>
 
@@ -27,4 +37,4 @@ const ChallengePage = () => {
     );
 };
 
-export default ChallengePage;
+export default ChallengePageComponent;
