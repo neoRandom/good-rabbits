@@ -8,8 +8,8 @@ import HomePage from "../pages/app/HomePage";
 import SignupPage from "../pages/auth/SignupPage";
 import LoginPage from "../pages/auth/LoginPage";
 import GoalsPage from "../pages/app/GoalsPage";
-import ChallengePage from "../pages/app/ChallengePage";
 import Error404 from "../pages/Error404";
+import PrizePage from "../pages/app/PrizesPage";
 
 const Root = () => {
     const { authUser, isCheckingAuth, checkAuth }: any = useAuthStore();
@@ -55,13 +55,13 @@ const Root = () => {
                             element={
                                 !authUser ? <GoalsPage /> : <Navigate to="/login" />
                             }
-                        />
+                        />   
                         <Route
-                            path="/app/challenges"
+                            path="/app/prizes"
                             element={
-                                !authUser ? <ChallengePage /> : <Navigate to="/login" />
+                                !authUser ? <PrizePage /> : <Navigate to="/login" />
                             }
-                        />
+                        />   
                     </Route>
 
                     {/* 404 Handler; TODO: 404 page */}
