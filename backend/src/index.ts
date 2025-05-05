@@ -2,6 +2,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
 
 // Utils
 import path from "path";
@@ -9,12 +10,11 @@ import path from "path";
 // Libraries
 import authRoutes from "./routes/auth.route.js";
 // import { connectDB } from "./lib/db.js";
-import loadEnv from "./lib/env.js";
 
 import { app, server } from "./lib/app.js";
 
 //
-loadEnv();
+dotenv.config();
 
 
 app.use(express.json());
