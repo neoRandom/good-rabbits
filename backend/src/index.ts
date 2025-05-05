@@ -16,7 +16,6 @@ import { app, server } from "./lib/app.js";
 //
 dotenv.config();
 
-
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -30,11 +29,11 @@ app.use("/api/auth", authRoutes);
 
 if (process.env.NODE_ENV === "production") {
     const __dirname = path.resolve();
-
+    
     app.use(express.static(path.join(__dirname, "../frontend/dist")))
 
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"))
+    app.get("/*splat", (req, res) => {
+        res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"))
     })
 }
 
