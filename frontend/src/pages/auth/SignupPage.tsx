@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuthStore } from "../../store/useAuthStore";
 import toast from "react-hot-toast";
+import logo from "../../assets/logo3.png";
 
 const SignupPage = () => {
     // const [showPassword, setShowPassword] = useState(false);  // TODO: mostrar a senha ou não
@@ -115,7 +116,7 @@ const SignupPage = () => {
             </div>
             <div className="hidden lg:flex flex-1 w-full">
                 <img
-                    src="src/assets/logo3.png"
+                    src={logo}
                     alt="Login"
                     className="w-full min-w-xl max-w-5xl m-auto"
                 />

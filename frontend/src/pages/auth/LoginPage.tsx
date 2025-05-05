@@ -7,6 +7,7 @@
  */
 
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../../assets/logo3.png";
 
 const LoginPage = () => {
     const navigate = useNavigate();
@@ -73,7 +74,7 @@ const LoginPage = () => {
             </div>
             <div className="hidden lg:flex flex-1 w-full">
                 <img
-                    src="src/assets/logo3.png"
+                    src={logo}
                     alt="Login"
                     className="w-full min-w-xl max-w-5xl m-auto"
                 />

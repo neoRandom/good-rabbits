@@ -3,6 +3,8 @@ import fire from "../../assets/media/icons/fire.png";
 import water from "../../assets/media/icons/water.png";
 import foot from "../../assets/media/icons/foot.png";
 import calendar from "../../assets/media/icons/calendar.svg";
+import roleta from "../../assets/roletaCoelho.png";
+
 
 const HomePage = () => {
     return (
@@ -82,7 +84,7 @@ const HomePage = () => {
 
             <div className="flex gap-2 h-[120px] bg-white rounded-(--radius-app-default) p-3 border border-(--color-app-detail)/25 shadow-(--shadow-app-neutral)">
                 <div className="h-full aspect-square border-[3px] border-(--color-app-secondary) bg-(--color-app-secondary-light)/25 rounded-(--radius-app-big)">
-                    <img src="src/assets/roletaCoelho.png" alt="" className="w-full" />
+                    <img src={roleta} alt="" className="w-full" />
                 </div>
 
                 <div className="flex flex-col">
@@ -109,7 +111,7 @@ const HomePage = () => {
                             <div className="flex flex-col justify-center items-center">
                                 <h1 className="text-heading-2 font-bold">Pé de Coelho</h1>
                                 <div className="flex justify-center items-center w-11/12 my-[-1rem]">
-                                    <img src="src/assets/roletaCoelho.png" alt="" className="w-full" />
+                                    <img src={roleta} alt="" className="w-full" />
                                 </div>
                                 <p className="text-detail-1 pb-4">Tente sua sorte na roleta Pé de Coelho</p>
                                 <button type="button" className="btn">Girar</button>
@@ -125,10 +127,10 @@ const HomePage = () => {
                         </form>
                         <div className="flex flex-col justify-center items-center">                     
                             <div className="flex justify-center items-center gap-2 relative">
-                                <img src="src/assets/coelhoConfuso.png" alt="" className="w-2/5 shadow-md rounded-2xl"/>
+                                <img src="src/assets/coelhoConfuso.png" alt="" className="w-[45%] lg:w-2/5 shadow-md rounded-2xl"/>
                                 <div className="flex flex-col justify-around items-center">
-                                    <h1 className="text-heading-2 font-bold absolute top-0">Dica Diária</h1>
-                                    <p className="text-detail-1 pt-4">Você sabia? Beber água aumenta sua quantidade máxima de pontos de vida!</p>
+                                    <h1 className="text-heading-2 font-bold sm:absolute sm:top-0">Dica Diária</h1>
+                                    <p className="text-detail-1 pt-4 ">Você sabia? Beber água aumenta sua quantidade máxima de pontos de vida!</p>
                                 </div>
                             </div>
                             
