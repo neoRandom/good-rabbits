@@ -49,7 +49,7 @@ export const useAuthStore: UseBoundStore<StoreApi<AuthStore>> = create(
 
                 set({ authUser: response.data });
 
-                toast.success("Account created successfully");
+                toast.success("Conta criada com sucesso");
             } catch (error: any) {
                 toast.error(error.response.data.message);
             } finally {
