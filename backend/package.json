@@ -6,21 +6,26 @@
   "main": "src/index.js",
   "scripts": {
     "build": "tsc -b",
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "npx json-server --port 2000 db.json & nodemon build/index.js",
+    "start": "npx json-server --port 2000 db.json & node build/index.js"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
+    "@types/multer": "^1.4.12",
     "nodemon": "^3.1.10",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "axios": "^1.9.0",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "json-server": "^1.0.0-beta.3",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.2"
   }

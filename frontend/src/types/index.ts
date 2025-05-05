@@ -9,7 +9,7 @@ type UserModel = {
 
 
 type SignUpForm = {
-    fullName: string;
+    username: string;
     email: string;
     password: string;
 };

@@ -9,7 +9,7 @@ import SignupPage from "../pages/auth/SignupPage";
 import LoginPage from "../pages/auth/LoginPage";
 import GoalsPage from "../pages/app/GoalsPage";
 import Error404 from "../pages/Error404";
-import Load from "../pages/load";
+import Load from "../pages/Load";
 import PrizePage from "../pages/app/PrizesPage";
 
 const Root = () => {
