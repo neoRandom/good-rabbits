@@ -88,7 +88,7 @@ const Navbar = () => {
                     data-tip="Perfil"
                 >
                     <Link
-                        to="/app"
+                        to="/app/profile"
                         onClick={() => setSelected(3)}
                         className="flex justify-center items-center w-[60px] md:w-[45px] h-[45px]"
                     >
