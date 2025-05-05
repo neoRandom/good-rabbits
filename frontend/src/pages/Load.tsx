@@ -1,10 +1,12 @@
+import logo from "../assets/logo3.png";
+
 const Load = () => {
     return (
         <div className="flex flex-col justify-center items-center gap-2 w-full h-full border overflow-hidden">
             <div className="flex flex-col justify-center items-center w-3/4">
                 <div className="flex justify-center items-center w-3/4">
                     <img
-                        src="src/assets/logo3.png"
+                        src={logo}
                         alt="Login"
                         className="w-full min-w-xl max-w-3xl m-auto"
                     />

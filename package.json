@@ -27,5 +27,8 @@
     "bugs": {
         "url": "https://github.com/neoRandom/good-rabbits/issues"
     },
-    "homepage": "https://github.com/neoRandom/good-rabbits#readme"
+    "homepage": "https://github.com/neoRandom/good-rabbits#readme",
+    "dependencies": {
+        "cally": "^0.8.0"
+    }
 }
