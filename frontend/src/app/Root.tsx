@@ -9,6 +9,7 @@ import SignupPage from "../pages/auth/SignupPage";
 import LoginPage from "../pages/auth/LoginPage";
 import GoalsPage from "../pages/app/GoalsPage";
 import Error404 from "../pages/Error404";
+import Load from "../pages/load";
 import PrizePage from "../pages/app/PrizesPage";
 
 const Root = () => {
@@ -66,6 +67,12 @@ const Root = () => {
 
                     {/* 404 Handler; TODO: 404 page */}
                     <Route path="*" element={<Error404 />} />
+                    <Route
+                        path="/load"
+                        element={
+                            !authUser ? <Load /> : <Navigate to="/load" />
+                        }
+                    />
                 </Route>
             </Routes>
         </BrowserRouter>
