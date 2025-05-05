@@ -1,9 +1,9 @@
-import logo from "/media/header02.png";
-import profile from "/media/icons/black-profile.svg";
-import trophy from "/media/icons/trophy.png";
-import fire from "/media/icons/fire.png";
-import dice from "/media/icons/dice.svg";
-import animal from "/media/icons/animal.png";
+import logo from "../../assets/logo2.png";
+import profile from "../../assets//media/icons/black-profile.svg";
+import trophy from "../../assets//media/icons/trophy.png";
+import fire from "../../assets//media/icons/fire.png";
+import dice from "../../assets//media/icons/dice.svg";
+import animal from "../../assets//media/icons/animal.png";
 
 
 const Topbar = () => {
