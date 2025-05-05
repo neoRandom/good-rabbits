@@ -1,11 +1,11 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
 import path from "path";
 import authRoutes from "./routes/auth.route.js";
-import loadEnv from "./lib/env.js";
 import { app, server } from "./lib/app.js";
-loadEnv();
+dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
