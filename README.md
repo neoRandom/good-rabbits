@@ -34,12 +34,13 @@ Combining behavioral science with intuitive design, Good Rabbits offers personal
 Prerequisites:
 
 * NodeJS and NPM installed
-* Have the project folder on your machine (via .zip or git clone)
+* Have the project folder on your machine (via .zip or `git clone`)
 
 <br />
 
 Step by step:
 
+* Copy in-place the `.env.example` files from both `backend` and `frontend` folders, rename to `.env` and modify as needed
 * Open the project folder with the terminal
 * Run the comands npm install && npm run build && npm run start
 

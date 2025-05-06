@@ -9,8 +9,10 @@ import SignupPage from "../pages/auth/SignupPage";
 import LoginPage from "../pages/auth/LoginPage";
 import GoalsPage from "../pages/app/GoalsPage";
 import Error404 from "../pages/Error404";
-import Load from "../pages/load";
+import Load from "../pages/Load";
 import PrizePage from "../pages/app/PrizesPage";
+import UserProfilePage from "../pages/app/UserProfilePage";
+import EditProfilePage from "../pages/app/EditProfilePage";
 
 const Root = () => {
     const { authUser, isCheckingAuth, checkAuth }: any = useAuthStore();
@@ -23,9 +25,7 @@ const Root = () => {
     // Loading screen while the system checks if the user is authenticated or not
     if (isCheckingAuth && !authUser)
         return (
-            <div className="flex items-center justify-center h-screen">
-                <Loader className="size-10 animate-spin" />
-            </div>
+            <Load />
         );
 
     return (
@@ -63,16 +63,23 @@ const Root = () => {
                                 !authUser ? <PrizePage /> : <Navigate to="/login" />
                             }
                         />   
+                        
+                    <Route
+                            path="/app/profile"
+                            element={
+                                !authUser ? <UserProfilePage /> : <Navigate to="/login" />
+                            }
+                        />   
+                    <Route
+                            path="/app/editprofile"
+                            element={
+                                !authUser ? <EditProfilePage /> : <Navigate to="/login" />
+                            }
+                        />   
                     </Route>
 
                     {/* 404 Handler; TODO: 404 page */}
                     <Route path="*" element={<Error404 />} />
-                    <Route
-                        path="/load"
-                        element={
-                            !authUser ? <Load /> : <Navigate to="/load" />
-                        }
-                    />
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "6332e130363a894b42fbaa522cc5242eed3e8dfb0e8b81606d15899331e7ed90",
+      "email": "example@example.example",
+      "hash": "453b67ed314bd4b6086ed746a383dd321eb5168a99c297d591a99e25d00e1446",
+      "profilePic": "",
+      "updatedAt": "",
+      "createdAt": ""
+    }
+  ]
+}
