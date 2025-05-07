@@ -105,8 +105,15 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className={`dropdown ${(window.innerWidth < 768) ? "dropdown-top" : "dropdown-right"} dropdown-end`}>
-                <button tabIndex={0} className="group flex justify-center items-center w-[45px] h-[45px] border border-app-detail/25 rounded-app-big active:bg-app-primary">
+            <div
+                className={`dropdown ${
+                    window.innerWidth < 768 ? "dropdown-top" : "dropdown-right"
+                } dropdown-end`}
+            >
+                <button
+                    tabIndex={0}
+                    className="group flex justify-center items-center w-[45px] h-[45px] border border-app-detail/25 rounded-app-big active:bg-app-primary"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="24px"
@@ -119,13 +126,23 @@ const Navbar = () => {
                 </button>
                 <ul
                     tabIndex={0}
-                    className="dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+                    className="dropdown-content bg-base-100 rounded-box z-1 p-2 w-fit shadow-sm whitespace-nowrap"
                 >
-                    <li>
-                        <a>Sobre nós</a>
+                    <li className="w-full mb-0.5">
+                        <Link
+                            to="/about-us"
+                            className="block w-full px-4 py-2 active:bg-app-detail/10 md:hover:bg-app-detail/10 rounded-app-default"
+                        >
+                            Sobre nós
+                        </Link>
                     </li>
-                    <li>
-                        <a>Log out</a>
+                    <li className="w-full">
+                        <Link
+                            to="/logout"
+                            className="block text-app-content-light w-full px-4 py-2 bg-red-700 active:bg-red-800 md:hover:bg-red-800 rounded-app-default"
+                        >
+                            Log out
+                        </Link>
                     </li>
                 </ul>
             </div>
