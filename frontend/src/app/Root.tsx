@@ -22,10 +22,7 @@ const Root = () => {
     }, [checkAuth]);
 
     // Loading screen while the system checks if the user is authenticated or not
-    if (isCheckingAuth && !authUser)
-        return (
-            <Load />
-        );
+    if (isCheckingAuth && !authUser) return <Load />;
 
     return (
         <BrowserRouter>
@@ -39,42 +36,24 @@ const Root = () => {
                     <Route path="/login" element={<LoginPage />} />
 
                     {/* App Routes */}
-                    <Route path="/app" element={<AppLayout />}>
+                    <Route
+                        path="/app"
+                        element={
+                            !authUser ? <AppLayout /> : <Navigate to="/login" />
+                        }
+                    >
+                        <Route index element={<HomePage />} />
+                        <Route path="/app/goals" element={<GoalsPage />} />
+                        <Route path="/app/prizes" element={<PrizePage />} />
+
                         <Route
-                            index
-                            element={
-                                authUser || true ? (
-                                    <HomePage />
-                                ) : (
-                                    <Navigate to="/login" />
-                                )
-                            }
+                            path="/app/profile"
+                            element={<UserProfilePage />}
                         />
                         <Route
-                            path="/app/goals"
-                            element={
-                                !authUser ? <GoalsPage /> : <Navigate to="/login" />
-                            }
-                        />   
-                        <Route
-                            path="/app/prizes"
-                            element={
-                                !authUser ? <PrizePage /> : <Navigate to="/login" />
-                            }
-                        />   
-                        
-                    <Route
-                            path="/app/profile"
-                            element={
-                                !authUser ? <UserProfilePage /> : <Navigate to="/login" />
-                            }
-                        />   
-                    <Route
                             path="/app/editprofile"
-                            element={
-                                !authUser ? <EditProfilePage /> : <Navigate to="/login" />
-                            }
-                        />   
+                            element={<EditProfilePage />}
+                        />
                     </Route>
 
                     {/* 404 Handler; TODO: 404 page */}
