@@ -39,7 +39,7 @@ const Root = () => {
                     <Route
                         path="/app"
                         element={
-                            !authUser ? <AppLayout /> : <Navigate to="/login" />
+                            authUser ? <AppLayout /> : <Navigate to="/login" />
                         }
                     >
                         <Route index element={<HomePage />} />
