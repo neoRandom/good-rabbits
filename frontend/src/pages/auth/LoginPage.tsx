@@ -6,20 +6,28 @@
  * - Sombra customizada pra combinar com o do Figma
  */
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo3.png";
+import { FormEvent, useState } from "react";
+import { useAuthStore } from "../../store/useAuthStore";
 
 const LoginPage = () => {
-    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+    });
+    const { login, isLoggingIn } = useAuthStore();
 
-    const onSubmit = () => {
-        navigate("/app");
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        login(formData);
     };
 
     return (
         <div className="h-full w-full flex border lg:flex-1 ">
             <div className="flex flex-col justify-center w-full h-full px-8 gap-7 max-w-xl m-auto lg:m-0">
-                <div className="flex flex-col items-center">
+                <form onSubmit={handleSubmit} className="flex flex-col items-center">
                     <h1 className="text-heading-2">Entre na sua Conta</h1>
                     <p className="text-body-2 text-app-detail">
                         Entre novamente na sua toca
@@ -46,8 +54,8 @@ const LoginPage = () => {
 
                     <button
                         type="submit"
-                        onClick={() => onSubmit()}
                         className="app-bg-primary w-full mb-6 py-3 rounded-app-default shadow-app-neutral"
+                        disabled={isLoggingIn}
                     >
                         Entre
                     </button>
@@ -57,7 +65,7 @@ const LoginPage = () => {
                     >
                         Esqueci minha Senha
                     </Link>
-                </div>
+                </form>
 
                 <div className="flex items-center opacity-50">
                     <hr className="flex-1 border-app-detail/50" />
