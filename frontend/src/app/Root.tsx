@@ -1,6 +1,5 @@
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
-import { Loader } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
 import MainLayout from "../pages/layouts/MainLayout";
 import AppLayout from "../pages/layouts/AppLayout";
