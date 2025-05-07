@@ -32,8 +32,10 @@ const Root = () => {
                     <Route index element={<Navigate to="/app" />} />
 
                     {/* Auth Routes */}
-                    <Route path="/signup" element={<SignupPage />} />
-                    <Route path="/login" element={<LoginPage />} />
+                    <Route element={authUser ? <Navigate to="/app"/> : null}>
+                        <Route path="/signup" element={<SignupPage />} />
+                        <Route path="/login" element={<LoginPage />} />
+                    </Route>
 
                     {/* App Routes */}
                     <Route

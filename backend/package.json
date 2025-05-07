@@ -6,8 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "tsc -b",
-    "dev": "npx json-server --port 2000 db.json & nodemon build/index.js",
-    "start": "npx json-server --port 2000 db.json & node build/index.js"
+    "start": "node build/index.js & npx json-server --port 2000 db.json"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.8",
@@ -15,7 +14,6 @@
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/multer": "^1.4.12",
-    "nodemon": "^3.1.10",
     "typescript": "^5.8.3"
   },
   "dependencies": {

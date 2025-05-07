@@ -15,9 +15,6 @@ export const useAuthStore: UseBoundStore<StoreApi<AuthStore>> = create(
         socket: null,
 
         checkAuth: async () => {
-            set({ isCheckingAuth: false });
-            return;
-
             try {
                 set({ isCheckingAuth: true });
 
@@ -75,7 +72,7 @@ export const useAuthStore: UseBoundStore<StoreApi<AuthStore>> = create(
 
                 set({ authUser: response.data });
 
-                toast.success("Logged In Successfully");
+                toast.success("Logado com sucesso");
             } catch (error: any) {
                 toast.error(error.response.data.message);
             } finally {
