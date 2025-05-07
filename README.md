@@ -57,7 +57,7 @@ Step by step:
 
 <h2 href="technologies">Technologies</h2>
 
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,tailwind,react,express,nodejs,figma" />
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,tailwind,react,vite,express,nodejs,figma" />
 
 <br />
 
