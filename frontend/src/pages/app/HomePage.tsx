@@ -28,7 +28,7 @@ const HomePage = () => {
                     </button>
                 </div>
 
-                <hr className="border-[#606060]/25" />
+                <hr className="border-(--color-app-detail)/25" />
 
                 {/* Pontuação */}
                 <div className="flex flex-col gap-4">
@@ -43,7 +43,7 @@ const HomePage = () => {
                         <div className="flex flex-col justify-center items-start md:items-center mt-2 md:mt-0">
                             <button
                                 type="button"
-                                className="w-full md:w-[160px] h-[32px] bg-gradient-to-r from-[var(--color-app-primary)] via-[var(--color-app-primary-light)] to-[var(--color-app-primary)] rounded-[var(--radius-app-default)] shadow-[var(--shadow-app-neutral)] text-white font-medium text-body-2"
+                                className="w-full md:w-[160px] h-[32px] bg-gradient-to-r from-(--color-app-primary) via-(--color-app-primary-light) to-(--color-app-primary) rounded-(--radius-app-default) shadow-(--shadow-app-neutral) text-white font-medium text-body-2"
                             >
                                 Prêmios
                             </button>
@@ -52,7 +52,7 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                <hr className="border-[#606060]/25" />
+                <hr className="border-(--color-app-detail)/25" />
 
                 {/* Pé de Coelho */}
                 <div className="flex flex-row gap-3 max-x-2/5 md:max-x-681 bg-white rounded-(--radius-app-default) p-3 border border-(--color-app-detail)/25 shadow-(--shadow-app-neutral)">
@@ -69,12 +69,12 @@ const HomePage = () => {
                         <div className="flex flex-col items-center justify-between gap-2 mt-2">
                             <button
                                 type="button"
-                                className="w-[130px] md:w-2/5 h-[30px] bg-gradient-to-r from-[var(--color-app-secondary)] via-[var(--color-app-secondary-light)] to-[var(--color-app-secondary)] rounded-[var(--radius-app-default)] shadow-[var(--shadow-app-neutral)] text-white text-body-2"
+                                className="w-[130px] md:w-2/5 h-[30px] bg-gradient-to-r from-(--color-app-secondary) via-(--color-app-secondary-light) to-(--color-app-secondary) rounded-(--radius-app-default) shadow-(--shadow-app-neutral) text-white text-body-2"
                                 onClick={() => (document.getElementById('my_modal_3') as HTMLDialogElement | null)?.showModal()}
                             >
                                 Girar
                             </button>
-                            <p className="text-body-4 text-[var(--color-app-detail)] text-center md:text-body-1">3 tentativas restantes</p>
+                            <p className="text-body-4 text-(--color-app-detail) text-center md:text-body-1">3 tentativas restantes</p>
                         </div>
 
                         <ModalRoleta />
