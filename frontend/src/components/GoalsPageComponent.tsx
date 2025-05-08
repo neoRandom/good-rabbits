@@ -6,21 +6,30 @@ type GoalProps = {
 
 const GoalsComponent = (props: GoalProps) => {
 
-    const handleGoalPage = () =>{
+    const handleGoalPage = () => {
         props.setGoalPage(false);
     }
 
     return (
         <div className="w-full md:flex flex-row-reverse justify-between overflow-x-auto">
-            <div className="flex flex-col items-center justify-center lg:items-start">
+            <div className="flex flex-col items-center justify-center lg:items-start w-full">
 
-                <div className="flex gap-2">
-                    <button className="bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950] w-[160px] rounded-t-[10px] text-white font-medium py-1">Suas Metas</button>
-                    <button onClick={handleGoalPage} className="bg-[#D9D9D9] w-[160px] rounded-t-[10px] text-black font-medium">Desafios Diários</button>
+                {/* Botões só aparecem em telas menores que md */}
+                <div className="flex gap-2 md:hidden">
+                    <button className="bg-linear-to-r from-[#00C950] via-[#10D960] to-[#00C950] w-[160px] rounded-t-(--radius-app-default) text-white font-medium py-1">Suas Metas</button>
+                    <button onClick={handleGoalPage} className="bg-[#D9D9D9] w-[160px] rounded-t-(--radius-app-default) text-black font-medium">Desafios Diários</button>
                 </div>
 
-                <div className="flex flex-col items-center w-[328px] h-[619px]  bg-white border border-[#606060] rounded-b-[20px] py-2 lg:w-2xl lg:h-[600px] lg:rounded-tr-[10px]">
-                    <p className="text-[15px] text-[#606060] lg:text-heading-4">
+                {/* Conteúdo do card de metas */}
+                <div className="
+                    flex flex-col items-center 
+                    w-full max-w-[328px] md:max-w-lg 
+                    h-[619px] md:h-[600px] 
+                    bg-white border border-(--color-app-detail)
+                    rounded-b-(--radius-app-big) md:rounded-(--radius-app-default) 
+                    py-2
+                ">
+                    <p className="text-[15px] text-[#606060] lg:text-heading-4 text-center">
                         Rastreie o seu progresso estabelecendo metas
                     </p>
                     <hr className="color-[#606060] w-8/9 mb-8" />

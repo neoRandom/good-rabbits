@@ -1,13 +1,53 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "6332e130363a894b42fbaa522cc5242eed3e8dfb0e8b81606d15899331e7ed90",
       "email": "example@example.example",
       "hash": "453b67ed314bd4b6086ed746a383dd321eb5168a99c297d591a99e25d00e1446",
       "profilePic": "",
       "updatedAt": "",
       "createdAt": ""
+    },
+    {
+      "id": "c103",
+      "username": "a",
+      "email": "a@a.a",
+      "hash": "$2b$10$tS7gFk8xLeLVcc4yfZ7sM.XewVDhbDU2CFq8vQWTs5hF5v.I65m9W",
+      "updatedAt": "2025-05-07T14:39:17.016Z",
+      "createdAt": "2025-05-07T14:39:17.016Z"
+    },
+    {
+      "id": "e6bc",
+      "username": "saasd",
+      "email": "asdas@asdasd.asdasd",
+      "hash": "$2b$10$1XYKf8h48rUO7oDuIw8goO5nkyeLUBxW/0.2KnErkjO5qafuqnTc.",
+      "updatedAt": "2025-05-07T14:48:13.911Z",
+      "createdAt": "2025-05-07T14:48:13.911Z"
+    },
+    {
+      "id": "aea3",
+      "username": "saasd",
+      "email": "asdas@asdasd.asdas",
+      "hash": "$2b$10$8gT.2h5krBnbHvl9CU/jXucGL65weysdWq/kQb8XUxlYLyaGBe6L6",
+      "updatedAt": "2025-05-07T14:52:44.008Z",
+      "createdAt": "2025-05-07T14:52:44.008Z"
+    },
+    {
+      "id": "618a",
+      "username": "gabs",
+      "email": "gabs@gabs.gabs",
+      "hash": "$2b$10$IIa/rPsZslzBbfbHH3ZL5OLqobzRbcaNqtZwDoUrqFr7q1dqZ3C9i",
+      "updatedAt": "2025-05-07T15:03:02.436Z",
+      "createdAt": "2025-05-07T15:03:02.436Z"
+    },
+    {
+      "id": "d26d",
+      "username": "gui",
+      "email": "gui@gui.gui",
+      "hash": "$2b$10$dHEKqfrzkFBqXt6m3Pe8o.xp1U2jHrktJsEGZ.fQ87tW71hzS2Orm",
+      "updatedAt": "2025-05-07T15:15:45.378Z",
+      "createdAt": "2025-05-07T15:15:45.379Z"
     }
   ]
 }

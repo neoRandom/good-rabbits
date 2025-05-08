@@ -1,9 +1,12 @@
 import logo from "../../assets/logo2.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useAuthStore } from "../../store/useAuthStore";
 
 const Navbar = () => {
     const [selected, setSelected] = useState<number>(0);
+
+    const { logout } = useAuthStore();
 
     return (
         <div className="flex flex-row md:flex-col items-center justify-between h-[55px] w-full md:h-full md:w-[55px] bg-white py-4 max-md:px-[16px]">
@@ -137,12 +140,12 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="w-full">
-                        <Link
-                            to="/logout"
+                        <button
+                            onClick={logout}
                             className="block text-app-content-light w-full px-4 py-2 bg-red-700 active:bg-red-800 md:hover:bg-red-800 rounded-app-default"
                         >
                             Log out
-                        </Link>
+                        </button>
                     </li>
                 </ul>
             </div>
